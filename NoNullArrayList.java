@@ -11,6 +11,13 @@ public class NoNullArrayList<T> extends ArrayList<T> {
         }
         return super.add(value);
     }
+
+    public boolean add(int i, T value) {
+        if (value == null) {
+            throw new IllegalArgumentException("null is not a valid input");
+        }
+        return super.add(i, value);
+    }
 }
 
 
