@@ -3,6 +3,6 @@ import java.util.*;
 public class Tester {
     public static void main(String[] args) {
         NoNullArrayList<Integer> test = new NoNullArrayList<Integer>();
-        System.out.println(test.add(1, 3));
+        test.add(0, 3);
     }
 }
