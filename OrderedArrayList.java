@@ -22,7 +22,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     }
 
     public void add(int i, T value) {
-
+        this.add(value);
     }
 
     public T set(int i, T value) {
