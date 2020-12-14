@@ -26,6 +26,12 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     }
 
     public T set(int i, T value) {
-
+        if (value == null) {
+            throw new IllegalArgumentException("null is not a valid input");
+        }
+        T temp = this.get(i);
+        super.remove(i);
+        this.add(value);
+        return temp;
     }
 }
