@@ -9,4 +9,13 @@
 
 You may access parent class methods using super.
 
+Comparable compares 2 objects, and returns the following:
+-1 if element is less than compared element
+0 if equals
+1 if larger
+
+thus when testing, check to see if a.comparesTo(b) <= 0
+
+for loop doesnt work for some weird reason, and so i used a while loop which fixed the issues in OrderedArrayList.
+
 
