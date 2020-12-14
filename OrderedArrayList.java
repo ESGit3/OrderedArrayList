@@ -11,14 +11,17 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
         if (value == null) {
             throw new IllegalArgumentException("null is not a valid input");
         }
-        for (int i = 0; i < this.size(); i++) {
+        boolean temp = false;
+        int i = 0;
+        while (!temp && i < size()) {
             if (value.compareTo(this.get(i)) <= 0) {
-               super.add(i, value);
-               return true;
+                temp = true;
+            } else {
+                i++;
             }
-            super.add(0, value);
-            return true;
         }
+        super.add(i, value);
+        return true;
     }
 
     public void add(int i, T value) {
