@@ -5,6 +5,10 @@ public class NoNullArrayList<T> extends ArrayList<T> {
         super();
     }
 
+    public NoNullArrayList(int capacity) {
+        super(capacity);
+    }
+
     public boolean add(T value) {
         if (value == null) {
             throw new IllegalArgumentException("null is not a valid input");
